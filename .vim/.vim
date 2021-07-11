@@ -1,0 +1,1 @@
+/home/kusanagi/.vim_setting/.vim

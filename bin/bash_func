@@ -1,0 +1,17 @@
+#!/bin/bash
+
+Laravel_APP_PATH=${HOME}/kusanagi_html/tatsulog
+WORDPRESS_APP_PATH=${HOME}/tatsuyuki.work/DocumentRoota
+VIM_SETTING=${HOME}/.vim_setting
+
+function cd-laravel {
+    cd ${Laravel_APP_PATH}
+}
+
+function cd-wordpress {
+    cd ${WORDPRESS_APP_PATH}
+}
+
+function cd-vim {
+    cd ${VIM_SETTING}
+}

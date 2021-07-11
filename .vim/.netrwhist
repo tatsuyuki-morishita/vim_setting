@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/kusanagi/tatsuyuki.work/log/nginx'
+let g:netrw_dirhist_8='/home/kusanagi/.ssh'
+let g:netrw_dirhist_7='/home/kusanagi/app/docker'
+let g:netrw_dirhist_6='/home/kusanagi/kusanagi_html/nuxt-second/pages'
+let g:netrw_dirhist_5='/home/kusanagi/kusanagi_html/tatsulog_manually_spa/routes'
+let g:netrw_dirhist_4='/home/kusanagi/kusanagi_html/tatsulog_manually_spa'
+let g:netrw_dirhist_3='/home/kusanagi/kusanagi_html'
+let g:netrw_dirhist_2='/home/kusanagi/kusanagi_html/nuxt-second/pages'
+let g:netrw_dirhist_1='/home/kusanagi/kusanagi_html/tatsulog/app/Http/Middleware'
+let g:netrw_dirhist_0='/home/kusanagi/kusanagi_html/tatsulog/public'

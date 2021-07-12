@@ -11,6 +11,8 @@
    #シンボリックリンクを貼る等の初期設定ファイル実行
    cd ~/.vim_setting
    bash setup.sh
+   #実行したそのセッションのみで実行する必要あり
+   source ~/.bash_profile
    ```
 
   

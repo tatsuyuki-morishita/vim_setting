@@ -3,7 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/MatchTagAlways'
+"Plugin 'Valloric/MatchTagAlways'
 call vundle#end()
 filetype plugin indent on
 
@@ -39,8 +39,6 @@ set hlsearch
 "----------------------------------------
 " エラーメッセージの表示時にビープを鳴らさない
 set noerrorbells
-" Windowsでパスの区切り文字をスラッシュで扱う
-set shellslash
 " 対応する括弧やブレースを表示
 set showmatch matchtime=1
 " インデント方法の変更
@@ -64,15 +62,11 @@ hi Comment ctermfg=3
 " 入力モードでTabキー押下時に半角スペースを挿入
 set expandtab
 " インデント幅
-set shiftwidth=2
+set shiftwidth=4
 " タブキー押下時に挿入される文字幅を指定
-set softtabstop=2
-" ファイル内にあるタブ文字の表示幅
-set tabstop=2
+set softtabstop=4
 " ツールバーを非表示にする
 set guioptions-=T
-" yでコピーした時にクリップボードに入る
-set guioptions+=a
 " メニューバーを非表示にする
 set guioptions-=m
 " 右スクロールバーを非表示
@@ -89,15 +83,11 @@ set nofoldenable
 set title
 " 行番号の表示
 set number
-" ヤンクでクリップボードにコピー
-set clipboard=unnamed,autoselect
-" Escの2回押しでハイライト消去
-nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " シンタックスハイライト
 syntax on
-" すべての数を10進数として扱う
+ "すべての数を10進数として扱う
 set nrformats=
-" 行をまたいで移動
+ "行をまたいで移動
 set whichwrap=b,s,h,l,<,>,[,],~
 
 " auto reload .vimrc

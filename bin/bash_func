@@ -1,13 +1,13 @@
 #!/bin/bash
 
-function cd-laravel {
-    cd ${Laravel_APP_PATH}
-}
+set -e -o pipefail
 
-function cd-wordpress {
-    cd ${WORDPRESS_APP_PATH}
+function cd-app {
+    cd ${APP_PATH}
 }
 
 function cd-vim {
     cd ${VIM_SETTING_DIR}
 }
+
+source ./each_os_process.sh

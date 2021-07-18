@@ -14,9 +14,9 @@ fi
 
 # コマンド追加
 alias ll='ls -alFG'
-#set nvm path
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+
+#Homebrewのパス登録
+export PATH=/opt/homebrew/bin:$PATH
 
 #プロンプトの色カスタマイズ
 if [ $UID -eq 0 ]; then

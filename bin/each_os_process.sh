@@ -2,12 +2,12 @@
 
 OS=$(uname)
 
-source ./common_func.sh
+source ${VIM_SETTING_DIR}/bin/common_func.sh
 
 if [ ${OS} == "Darwin" ]; then
-    source ./Mac.sh
+    source ${VIM_SETTING_DIR}/bin/Mac.sh
 elif [ ${OS} == 'Linux' ]; then
-    source ./Linux.sh
+    source ${VIM_SETTING_DIR}/bin/Linux.sh
 else
     echo "Your platform (${OS}) is not supported."
     exit 1

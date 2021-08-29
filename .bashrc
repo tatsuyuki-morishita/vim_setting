@@ -17,6 +17,8 @@ alias ll='ls -alFG'
 
 #Homebrewのパス登録
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 
 #プロンプトの色カスタマイズ
 if [ $UID -eq 0 ]; then

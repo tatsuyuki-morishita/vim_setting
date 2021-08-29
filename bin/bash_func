@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e -o pipefail
+#set -e -o pipefail
 
 function cd-app {
     cd ${APP_PATH}
@@ -10,4 +10,4 @@ function cd-vim {
     cd ${VIM_SETTING_DIR}
 }
 
-source ./each_os_process.sh
+source ${VIM_SETTING_DIR}/bin/each_os_process.sh

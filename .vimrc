@@ -3,7 +3,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'Valloric/MatchTagAlways'
+Plugin 'fatih/vim-go'
+"code formatter
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+"typescript formatter
+Plugin 'leafgarland/typescript-vim'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plugin 'google/vim-glaive'
 call vundle#end()
 filetype plugin indent on
 
@@ -89,6 +97,8 @@ syntax on
 set nrformats=
  "行をまたいで移動
 set whichwrap=b,s,h,l,<,>,[,],~
+"ヤンクすることでクリップボードにも保存されるように設定
+set clipboard+=unnamed
 
 " auto reload .vimrc
 augroup source-vimrc
@@ -102,13 +112,6 @@ augroup auto_comment_off
   autocmd!
   autocmd BufEnter * setlocal formatoptions-=r
   autocmd BufEnter * setlocal formatoptions-=o
-augroup END
-
-" HTML/XML閉じタグ自動補完
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
 " 編集箇所のカーソルを記憶
@@ -135,3 +138,23 @@ augroup vimrc-auto-mkdir  " {{{
     endif
   endfunction  " }}}
 augroup END  " }}}
+
+let g:go_fmt_command = "goimports"
+autocmd FileType go setlocal noexpandtab
+autocmd FileType go setlocal tabstop=4
+autocmd FileType go setlocal shiftwidth=4
+
+"auto format
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  autocmd FileType vue AutoFormatBuffer prettier
+augroup END

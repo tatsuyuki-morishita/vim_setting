@@ -1,17 +1,19 @@
 # vim_setting
 
-## 使用前提
-使用シェルがbashであること。
+## premise of use
+SHELL you use is bash.
 
 ## Quick Start
 
    ```
-   #ディレクトリ作成 && git clone
+   #create directory && git clone
    git clone https://github.com/tatsuyuki-morishita/vim_setting.git ~/.vim_setting/
-   #シンボリックリンクを貼る等の初期設定ファイル実行
+   
+   #Create a symbolic link of vim-related file
    cd ~/.vim_setting
    bash setup.sh
-   #実行したそのセッションのみで実行する必要あり
+   
+   #load .bashrc to apply settings
    source ~/.bash_profile
    ```
 

@@ -15,6 +15,11 @@ SHELL you use is bash.
    
    #load .bashrc to apply settings
    source ~/.bash_profile
+   
+   #create shortcut
+   cd-vim 
+   cp .env.example .env
+   sed -i '' 's#${HOME}/app/#new_short_cut_path#g' .env
    ```
 
   

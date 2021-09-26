@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#set -e -o pipefail
-
+#開発アプリディレクトリへのショートカット
 function cd-app {
     cd ${APP_PATH}
 }
 
+#vim設定ディレクトリへのショートカット
 function cd-vim {
     cd ${VIM_SETTING_DIR}
 }
-
-#source ./each_os_process.sh

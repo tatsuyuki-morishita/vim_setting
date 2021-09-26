@@ -29,6 +29,14 @@ set ambiwidth=double
 set wildmenu
 
 "----------------------------------------
+" ブラックホールレジスタ
+"----------------------------------------
+nnoremap c "_c
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+
+"----------------------------------------
 " 検索
 "----------------------------------------
 " 検索するときに大文字小文字を区別しない
@@ -144,7 +152,7 @@ autocmd FileType go setlocal noexpandtab
 autocmd FileType go setlocal tabstop=4
 autocmd FileType go setlocal shiftwidth=4
 
-"auto format
+"オートフォーマット
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
   autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format

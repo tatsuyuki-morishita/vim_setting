@@ -19,7 +19,7 @@ SHELL you use is bash.
    #create shortcut
    cd-vim 
    cp .env.example .env
-   sed -i '' 's#${HOME}/app/#new_short_cut_path#g' .env
+   sed -i '' 's#${HOME}/app#new_short_cut_path#g' .env
    ```
 
   
